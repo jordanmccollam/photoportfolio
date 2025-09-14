@@ -1,5 +1,5 @@
-import Photo from './Photo/Photo';
+import Gallery from './Gallery/Gallery';
 
 export {
-    Photo
+    Gallery
 }
