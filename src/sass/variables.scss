@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+/*
+ *  Responsive
+ */
+$phone: 37.438em; // 599px
+$phablet: 37.5em; //600px
+$tablet: 56.25em; // 900px
+$laptop: 75em; // 1200px
+$desktop: 90em; // 1440px
+
+$landscape: "(orientation: landscape)";
+
+$phone-only: "(max-width: #{$phone})";
+$phablet-only: "(min-width: #{$phablet}) and (max-width: #{$tablet})";
+$tablet-only: "(min-width: #{$tablet}) and (max-width: #{$laptop})";
+$laptop-only: "(min-width: #{$laptop}) and (max-width: #{$desktop})";
+
+$up-to-phablet: "(max-width: #{$phablet})";
+$up-to-tablet: "(max-width: #{$tablet})";
+$up-to-laptop: "(max-width: #{$laptop})";
+$up-to-desktop: "(max-width: #{$desktop})";
+
+$phablet-up: "(min-width: #{$phablet})";
+$tablet-up: "(min-width: #{$tablet})";
+$laptop-up: "(min-width: #{$laptop})";
+$desktop-up: "(min-width: #{$desktop})";
+
+/*
+ *  Font Sizes
+ */
+$text-06: 3.375em;
+$text-05: 2.625em;
+$text-04: 2em;
+$text-03: 1.75em;
+$text-02: 1.25em;
+$text-01: 1em;
+$text-00: 0.875em;
+$text--1: 0.775em;
+
+/*
+ *  SPACING
+ */
+$space-15: 4rem;
+$space-14: 3.75rem;
+$space-13: 3.5rem;
+$space-12: 3.25rem;
+$space-11: 3rem;
+$space-10: 2.75rem;
+$space-09: 2.5rem;
+$space-08: 2.25rem;
+$space-07: 2rem;
+$space-06: 1.75rem;
+$space-05: 1.5rem;
+$space-04: 1.25rem;
+$space-03: 1rem;
+$space-02: 0.75rem;
+$space-01: 0.5rem;
+$space-00: 0.25rem;
+
+/*
+ *  COLORS
+ */
+
+// Blue
+$blue-20: #1f2a5a;
+$blue-10: #5B7EDD;
+$blue-00: #B7D0FF;
+
+// Green
+$green-80: #082a22;
+$green-70: #115344;
+$green-60: #197d67;
+$green-50: #22a689;
+$green-40: #2ad0ab; // primary
+$green-30: #55d9bc;
+$green-20: #7fe3cd;
+$green-10: #aaecdd;
+$green-00: #d4f6ee;
+
+// Yellow
+$yellow-60: #5c4818;
+$yellow-50: #8b6d27;
+$yellow-40: #c9a447;
+$yellow-30: #f3c96c;
+$yellow-20: #fae1a3;
+$yellow-10: #fdf3d9;
+$yellow-00: #fffcf5;
+
+// Red
+$red-60: #60191a;
+$red-50: #881c1f;
+$red-40: #b62226;
+$red-30: #da3336;
+$red-20: #e26567;
+$red-10: #f4abab;
+$red-00: #fce8e8;
+
+// Grey
+$grey-40: #2E2E2E;
+$grey-30: #595959;
+$grey-20: #888888;
+$grey-10: #BABABA;
+$grey-00: #EFEFEF;
+
+/*
+ *  BOOTSTRAP OVERRIDES
+ */
+
+$primary: #faaa1e;
+// $primary: #90b1aa;
+$primary-80: darken($primary, 40%);
+$primary-70: darken($primary, 30%);
+$primary-60: darken($primary, 20%);
+$primary-50: darken($primary, 10%);
+$primary-40: $primary;
+$primary-30: lighten($primary, 10%);
+$primary-20: lighten($primary, 20%);
+$primary-10: lighten($primary, 30%);
+$primary-00: lighten($primary, 40%);
+
+$danger: #ff4c60;
+$danger-80: darken($danger, 40%);
+$danger-70: darken($danger, 30%);
+$danger-60: darken($danger, 20%);
+$danger-50: darken($danger, 10%);
+$danger-40: $danger;
+$danger-30: lighten($danger, 10%);
+$danger-20: lighten($danger, 20%);
+$danger-10: lighten($danger, 30%);
+$danger-00: lighten($danger, 40%);
+
+$success: #6c6ce5;
+$success-80: darken($success, 40%);
+$success-70: darken($success, 30%);
+$success-60: darken($success, 20%);
+$success-50: darken($success, 10%);
+$success-40: $success;
+$success-30: lighten($success, 10%);
+$success-20: lighten($success, 20%);
+$success-10: lighten($success, 30%);
+$success-00: lighten($success, 40%);
+
+$dark: #333951;
+// $dark: #d76735;
+$dark-80: darken($dark, 40%);
+$dark-70: darken($dark, 30%);
+$dark-60: darken($dark, 20%);
+$dark-50: darken($dark, 10%);
+$dark-40: $dark;
+$dark-30: lighten($dark, 10%);
+$dark-20: lighten($dark, 20%);
+$dark-10: lighten($dark, 30%);
+$dark-00: lighten($dark, 40%);
+
+/*
+ *  UI
+ */
+$bg: #e7eefb;
+// $bg: #f2edd9;
+$text-color: $dark;
+$light: darken($bg, 2%);
+
+$radius: 20px;
+
+$font-primary: 'Titillium Web', sans-serif;
+$font-secondary: 'Titillium Web', sans-serif;
+
+$transition: 0.4s;
+
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow: 5px 5px 1px;
+$shadow: none !important;
+$shadow-hover: 3px 3px 16px rgba(0,0,0,0.05);

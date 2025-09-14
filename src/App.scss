@@ -1,0 +1,25 @@
+@import "./sass/variables";
+// @import "./sass/utils";
+// @import "./sass/type";
+// @import "./sass/ui";
+// @import "./sass/anim";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  box-sizing: border-box;
+  // overflow: hidden !important;
+}
+
+.App {
+  background: $bg;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+// @import "./screens/Home/home.scss";
+// @import "./screens/Projects/projects.scss";
+// @import "./screens/Project/project.scss";
+// @import "./screens/Landing/landing.scss";
