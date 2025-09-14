@@ -1,6 +1,23 @@
 # PHOTO PORTFOLIO
 A photography portfolio developed for Carl Doez. Trying to design it like a sudo template that can be reused in other photography portfolios.
 
+## SETTING UP PHOTO PORTFOLIO CODING ENVIORNMENT
+
+STEP 1 - Run 'npm install' to install project dependencies.
+
+STEP 2 - Add a .env file with the following variables
+```
+REACT_APP_DROPBOX_TOKEN
+DROPBOX_TOKEN
+```
+Find the values here [dropbox.com/developers](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps)
+
+STEP 3 - Run 'node server.js' to boot the server
+
+STEP 4 - Run 'npm start' to boot the front end.
+
+DONE - You're good to go! Happy coding!
+
 
 # Getting Started with Create React App
 

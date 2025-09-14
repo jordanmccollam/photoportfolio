@@ -1,5 +1,16 @@
 @import "../../sass/variables";
 
-.main {
-    // overflow: hidden !important;
+$gap: 1px;
+
+.main,
+.gallery {
+    column-count: 3; /* number of columns */
+    column-gap: $gap;
+
+    .gallery-item {
+        width: 100%;
+        margin-bottom: $gap;
+        display: block;
+        object-fit: cover;
+    }
 }

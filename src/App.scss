@@ -16,10 +16,8 @@
   width: 100vw;
   margin: 0px;
   padding: 0px;
+  overflow: scroll;
 }
 
 
-// @import "./screens/Home/home.scss";
-// @import "./screens/Projects/projects.scss";
-// @import "./screens/Project/project.scss";
-// @import "./screens/Landing/landing.scss";
+@import "./screens/Main/main.scss";
