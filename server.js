@@ -28,7 +28,6 @@ app.get("/api/photos", async (req, res) => {
     });
 
     const listData = await listRes.json();
-    console.log("Dropbox list response:", listData);
 
     if (!listData.entries || !Array.isArray(listData.entries)) {
       return res.status(500).json({ error: "No entries found or Dropbox error", details: listData });
