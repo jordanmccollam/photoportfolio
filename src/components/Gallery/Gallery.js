@@ -28,7 +28,7 @@ const Gallery = () => {
 
     return (
         <div className="gallery">
-            {photos.map((photo, index) => (
+            {photos.sort(() => Math.random() - 0.5).map((photo, index) => (
                 <img
                     key={`photo-${index}`}
                     src={photo.url}

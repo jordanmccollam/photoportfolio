@@ -3,11 +3,11 @@
 
 
 .main {
-    font-family: $font-primary;
+    font-family: $font-secondary;
     color: $text-color;
 
     &-content {
-        margin-top: 6.5em;
+        margin-top: 4.5em;
     }
 
     .profile-pic {
@@ -23,7 +23,7 @@
     }
 
     .tagline{
-        font-size: 1.5em;
+        font-size: 1.45em;
     }
 
     .bio {
@@ -41,6 +41,19 @@
     }
     .spacer-top {
         margin-top: 5em;
+
+        &-sm {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+    }
+    .spacer-bottom {
+        margin-top: 5em;
+
+        &-sm {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
     }
 
 

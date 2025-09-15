@@ -1,6 +1,7 @@
 @import "../../sass/variables";
 
-$gap: 1px;
+$gap: 2em;
+$gap-mobile: 1px;
 
 
 .gallery {
@@ -12,5 +13,17 @@ $gap: 1px;
         margin-bottom: $gap;
         display: block;
         object-fit: cover;
+        border-radius: $radius;
+
+        @media (max-width: 767.98px) {
+            margin-bottom: $gap-mobile;
+            border-radius: 4px;
+        }
+    }
+
+    /* Mobile (less than 576px) */
+    @media (max-width: 767.98px) {
+        column-gap: $gap-mobile;
+        column-count: 3;
     }
 }

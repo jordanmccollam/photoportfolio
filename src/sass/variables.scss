@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Moderustic:wght@300..800&display=swap');
 
 /*
  *  Responsive
@@ -163,7 +163,7 @@ $ghana-bg: #0D0D0D;
 /*
  *  UI
  */
-$bg: #eef0f1; // light
+$bg: #F8F9FA; // light
 // $bg: $ghana-bg; // dark
 
 $text-color: $ghana-bg; //light
@@ -174,7 +174,7 @@ $light: darken($bg, 2%);
 $radius: 20px;
 
 $font-primary: "Alkatra", system-ui;
-$font-secondary: 'Titillium Web', sans-serif;
+$font-secondary: "Moderustic", serif;
 
 $transition: 0.4s;
 

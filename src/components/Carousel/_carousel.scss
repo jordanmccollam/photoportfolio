@@ -19,9 +19,13 @@
     justify-content: center;
 }
 
+.carousel-img {
+    border-radius: $radius;
+}
 
 .carousel-img.center {
     max-height: 500px;
+    max-width: 90vw;
     // border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     position: relative;

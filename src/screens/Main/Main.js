@@ -28,25 +28,27 @@ const Main = (props) => {
             </div>
 
             <Row className="main-content">
-                <Col md={6} className="d-flex justify-content-center" >
+                <Col lg={6} className="d-flex justify-content-center" >
                     <div className="profile-pic"></div>
                 </Col>
-                <Col md={6} className="d-flex justify-content-center align-items-center" >
-                    <div className="bio">
+                <Col lg={6} className="d-flex justify-content-center align-items-center" >
+                    <div className="bio text-uppercase">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         <br /><br />
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         <br /><br />
-                        <div className="tagline text-center">
+                        <div className="tagline text-center text-uppercase">
                             Let me help you bring your vision to life.
                         </div>
                     </div>
                 </Col>
             </Row>
 
-            <div className="spacer-sm" ><Carousel /></div>
+            <div className="spacer-sm" />
 
-            <div className=""><GhanaBorder /></div>
+            <Carousel />
+
+            <div className="spacer" />
 
             <Gallery />
 
