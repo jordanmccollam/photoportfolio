@@ -1,29 +1,36 @@
 @import "../../sass/variables";
 
-
+$profile-size: 33em;
 
 .main {
     font-family: $font-secondary;
     color: $text-color;
+    font-weight: bold;
+    font-size: $text-00;
 
     &-content {
         margin-top: 4.5em;
+        height: 100vh;
     }
 
     .profile-pic {
         border: 1px solid black;
         border-radius: 100%;
         margin-top: 5em;
-        height: 34em;
-        width: 34em;
+        height: $profile-size;
+        width: $profile-size;
     }
 
     .logo {
         width: 15em;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .tagline{
-        font-size: 1.45em;
+        font-size: $text-02;
     }
 
     .bio {

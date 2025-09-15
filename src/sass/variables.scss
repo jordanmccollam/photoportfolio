@@ -158,15 +158,16 @@ $dark-00: lighten($dark, 40%);
 $ghana-green: #00683C;
 $ghana-yellow: #F5CB14;
 $ghana-red: #C91225;
-$ghana-bg: #0D0D0D;
+$ghana-bg: #0D0D0D; // #1C1C1C <- great ghana bg color || 0D0D0D <- what I was using before
+
 
 /*
  *  UI
  */
-$bg: #F8F9FA; // light
+$bg: #ffffff; // light
 // $bg: $ghana-bg; // dark
 
-$text-color: $ghana-bg; //light
+$text-color: #0f0f0f; //light
 // $text-color: #eef0f1; //dark 
 
 $light: darken($bg, 2%);
