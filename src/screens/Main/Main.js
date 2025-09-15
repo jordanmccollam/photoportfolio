@@ -25,7 +25,7 @@ const Main = (props) => {
     }
 
     return (
-        <Container className="main">
+        <Container className="main" id="main-section">
             
             <div className="top-bar-container">
                 <div className="top-bar container">
@@ -41,7 +41,7 @@ const Main = (props) => {
                 </div>
             </div>
 
-            <Row className="main-content" id="main-section">
+            <Row className="main-content">
                 <Col lg={5} className="d-flex justify-content-center align-items-center" >
                     <div className="profile-pic"></div>
                 </Col>
