@@ -3,5 +3,60 @@
 
 
 .main {
+    font-family: $font-primary;
+    color: $text-color;
 
+    &-content {
+        margin-top: 6.5em;
+    }
+
+    .profile-pic {
+        border: 1px solid black;
+        border-radius: 100%;
+        margin-top: 5em;
+        height: 34em;
+        width: 34em;
+    }
+
+    .logo {
+        width: 15em;
+    }
+
+    .tagline{
+        font-size: 1.5em;
+    }
+
+    .bio {
+        margin-top: 5em;
+    }
+
+    .spacer {
+        margin-top: 5em;
+        margin-bottom: 5em;
+
+        &-sm {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+    }
+    .spacer-top {
+        margin-top: 5em;
+    }
+
+
+
+    .top-bar {
+        // background-color: $ghana-bg;
+        display: flex;
+        justify-content: center;
+        background-color: $bg;
+
+        &-container {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 99;
+        }
+    }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
 /*
  *  Responsive
@@ -153,17 +153,27 @@ $dark-20: lighten($dark, 20%);
 $dark-10: lighten($dark, 30%);
 $dark-00: lighten($dark, 40%);
 
+
+// GHANAN COLORS
+$ghana-green: #00683C;
+$ghana-yellow: #F5CB14;
+$ghana-red: #C91225;
+$ghana-bg: #0D0D0D;
+
 /*
  *  UI
  */
-$bg: #e7eefb;
-// $bg: #f2edd9;
-$text-color: $dark;
+$bg: #eef0f1; // light
+// $bg: $ghana-bg; // dark
+
+$text-color: $ghana-bg; //light
+// $text-color: #eef0f1; //dark 
+
 $light: darken($bg, 2%);
 
 $radius: 20px;
 
-$font-primary: 'Titillium Web', sans-serif;
+$font-primary: "Alkatra", system-ui;
 $font-secondary: 'Titillium Web', sans-serif;
 
 $transition: 0.4s;
