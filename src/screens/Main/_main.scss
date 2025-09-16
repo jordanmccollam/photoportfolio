@@ -13,6 +13,7 @@
 
     .about-section {
         margin-top: $space-02;
+        margin-bottom: $space-02;
         height: 100vh;
 
         .about-img {
@@ -23,13 +24,10 @@
             }
         }
 
-        .about-bio {
-            // border: 1px solid red;
-        }
-
         .contact-link {
             color: $ghana-yellow;
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 }

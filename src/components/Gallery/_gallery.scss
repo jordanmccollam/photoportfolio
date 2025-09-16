@@ -1,10 +1,12 @@
 @import "../../sass/variables";
 
-$gap: 2em;
+$gap: $space-02;
 $gap-mobile: 1px;
 
 
 .gallery {
+    // padding-left: $gap;
+    // padding-right: $gap;
     column-count: 3; /* number of columns */
     column-gap: $gap;
 
@@ -13,7 +15,7 @@ $gap-mobile: 1px;
         margin-bottom: $gap;
         display: block;
         object-fit: cover;
-        border-radius: $radius;
+        // border-radius: $radius;
 
         @media (max-width: 767.98px) {
             margin-bottom: $gap-mobile;

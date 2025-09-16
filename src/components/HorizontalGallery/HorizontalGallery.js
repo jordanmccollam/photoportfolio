@@ -28,9 +28,12 @@ const HorizontalGallery = (props) => {
         if (!el) return;
 
         const handleWheel = (e) => {
-            if (e.deltaY !== 0) {
-                e.preventDefault();
-                el.scrollLeft += e.deltaY; // reversed direction
+            const rect = el.getBoundingClientRect();
+            const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+            if (isFullyVisible && e.deltaY !== 0) {
+                e.preventDefault(); // prevent vertical scroll
+                el.scrollLeft += e.deltaY; // horizontal scroll
             }
         };
 

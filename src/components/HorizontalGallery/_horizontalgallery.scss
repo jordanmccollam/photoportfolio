@@ -44,8 +44,11 @@
     max-height: 100vh;
     margin-right: $space-02;
 
-    &:first-child {
-        margin-left: $space-02;
+    // &:first-child {
+    //     margin-left: $space-02;
+    // }
+    &:last-child {
+        margin-right: none;
     }
 }
 

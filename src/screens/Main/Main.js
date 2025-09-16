@@ -87,12 +87,15 @@ const Main = (props) => {
                                 Let me help you bring your vision to life.
                             </div>
                             <div className="text-center">
-                                <ChevronsDown size={'2em'} className="nav-btn" onClick={() => scrollToSection('main-section')} />
+                                <ChevronsDown size={'2em'} className="nav-btn" onClick={() => scrollToSection('gallery-section')} />
                             </div>
                         </Col>
                     </Row>
                 </Col>
             </Row>
+
+            
+            <Gallery photos={photos} id={"gallery-section"} />
 
 
 
