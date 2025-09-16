@@ -1,82 +1,94 @@
 @import "../../sass/variables";
 
-$profile-size: 33em;
 
 .main {
-    font-family: $font-secondary;
-    color: $text-color;
-    font-weight: bold;
-    font-size: $text-00;
-
-    &-content {
-        margin-top: 4.5em;
-        height: 100vh;
-    }
-
-    .profile-pic {
-        border: 1px solid black;
-        border-radius: 100%;
-        margin-top: 5em;
-        height: $profile-size;
-        width: $profile-size;
-    }
-
-    .logo {
-        width: 15em;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .tagline{
-        font-size: $text-02;
-    }
-
-    .bio {
-        margin-top: 5em;
-    }
-
-    .spacer {
-        margin-top: 5em;
-        margin-bottom: 5em;
-
-        &-sm {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-    }
-    .spacer-top {
-        margin-top: 5em;
-
-        &-sm {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-    }
-    .spacer-bottom {
-        margin-top: 5em;
-
-        &-sm {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-    }
-
-
-
-    .top-bar {
-        // background-color: $ghana-bg;
-        display: flex;
-        justify-content: center;
-        background-color: $bg;
-
-        &-container {
-            position: fixed;
-            width: 100%;
-            left: 0;
-            top: 0;
-            z-index: 99;
-        }
-    }
+    // background-color: lightgray;
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: 0;
 }
+
+
+
+
+// $profile-size: 33em;
+
+// .main {
+//     font-family: $font-secondary;
+//     color: $text-color;
+//     font-weight: bold;
+//     font-size: $text-00;
+
+//     &-content {
+//         margin-top: 4.5em;
+//         height: 100vh;
+//     }
+
+//     .profile-pic {
+//         border: 1px solid black;
+//         border-radius: 100%;
+//         margin-top: 5em;
+//         height: $profile-size;
+//         width: $profile-size;
+//     }
+
+//     .logo {
+//         width: 15em;
+
+//         &:hover {
+//             cursor: pointer;
+//         }
+//     }
+
+//     .tagline{
+//         font-size: $text-02;
+//     }
+
+//     .bio {
+//         margin-top: 5em;
+//     }
+
+//     .spacer {
+//         margin-top: 5em;
+//         margin-bottom: 5em;
+
+//         &-sm {
+//             margin-top: 2em;
+//             margin-bottom: 2em;
+//         }
+//     }
+//     .spacer-top {
+//         margin-top: 5em;
+
+//         &-sm {
+//             margin-top: 2em;
+//             margin-bottom: 2em;
+//         }
+//     }
+//     .spacer-bottom {
+//         margin-top: 5em;
+
+//         &-sm {
+//             margin-top: 2em;
+//             margin-bottom: 2em;
+//         }
+//     }
+
+
+
+//     .top-bar {
+//         // background-color: $ghana-bg;
+//         display: flex;
+//         justify-content: center;
+//         background-color: $bg;
+
+//         &-container {
+//             position: fixed;
+//             width: 100%;
+//             left: 0;
+//             top: 0;
+//             z-index: 99;
+//         }
+//     }
+// }

@@ -1,0 +1,29 @@
+@import "../../sass/variables";
+
+
+.horiz-gal-container {
+    position: relative;
+    height: 100%;
+}
+
+.horiz-gal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    display: flex;
+    transition: $transition;
+
+    &-loading {
+        opacity: 0;
+    }
+}
+
+.horiz-gal-img {
+    max-height: 100vh;
+    margin-right: $space-02;
+
+    &:first-child {
+        margin-left: $space-02;
+    }
+}

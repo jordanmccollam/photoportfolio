@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Container, Button } from 'react-bootstrap';
-import { Gallery, GhanaBorder, Carousel } from "../../components";
+import { Gallery, GhanaBorder, Carousel, HorizontalGallery } from "../../components";
 import { ChevronsDown } from "lucide-react";
 import logo from "../../assets/logo-banner.png"
 
@@ -9,6 +9,28 @@ import './_main.scss';
 const logger = "Screen/Main:: ";
 
 const Main = (props) => {
+    const [photos, setPhotos] = useState([]);
+
+    useEffect(() => {
+        fetchPhotos();
+    }, [])
+
+    // This pulls the photos from dropbox api
+    const fetchPhotos = async () => {
+        const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        // console.log(logger + "Fetching from: " + API_URL)
+        const res = await fetch(`${API_URL}/api/photos`);
+        // console.log(logger + "res: ", res);
+
+        if (!res.ok) {
+            throw new Error(logger + "Failed to fetch photos: " + res.status);
+        }
+
+        const data = await res.json();
+        // console.log(logger + "data: ", data);
+        const data_randomized = data.sort(() => Math.random() - 0.5)
+        setPhotos(data_randomized);
+    }
 
     const scrollToNextSection = (e) => {
         const section = document.getElementById("gallery-section");
@@ -25,9 +47,16 @@ const Main = (props) => {
     }
 
     return (
-        <Container className="main" id="main-section">
+        <Container className="main" id="main-section" fluid>
             
-            <div className="top-bar-container">
+            {photos.length > 0 && ( <HorizontalGallery photos={photos} size={8} /> )}
+
+
+
+
+
+            
+            {/* <div className="top-bar-container">
                 <div className="top-bar container">
                     <Row className="w-100 justify-content-center">
                         <img 
@@ -66,29 +95,6 @@ const Main = (props) => {
             <div id="gallery-section" />
             <div className="spacer-sm" />
             <Carousel />
-            <Gallery />
-
-
-            {/* <Row className="">
-                <Col className="d-flex justify-content-center">
-                    <img 
-                        alt="logo"
-                        src={logo}
-                        className="logo"
-                    />
-                </Col>
-            </Row>
-            <Row className="mb-5">
-                <Col>
-                    <div className="sub-header text-center">Let me help you bring your vision to life.</div>
-                </Col>
-            </Row>
-            <Row className="mb-5">
-                <Col className="logo-border-layer-1"></Col>
-                <Col className="logo-border-layer-2"></Col>
-                <Col className="logo-border-layer-3"></Col>
-            </Row>
-
             <Gallery /> */}
         </Container>
     )
