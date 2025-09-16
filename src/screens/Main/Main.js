@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Container, Button, Form } from 'react-bootstrap';
 import { Gallery, GhanaBorder, Carousel, HorizontalGallery } from "../../components";
-import { ChevronsDown, ChevronsUp } from "lucide-react";
+import { ChevronsDown, ChevronsUp, Instagram } from "lucide-react";
 import logo from "../../assets/logo-banner.png"
 import contactPhoto from "../../assets/test-img.webp"
 import aboutPhoto from "../../assets/test-img.webp"
@@ -123,7 +123,15 @@ const Main = (props) => {
                                     <Form.Control className="mt-2" placeholder="Subject" name="subject" />
                                     <Form.Control className="mt-2" as="textarea" rows={5} placeholder="Message" name="message" />
                                     <div className="d-flex justify-content-between mt-2">
-                                        <div className="text-yellow d-none d-lg-block">Or email directly at carlsemail@gmail.com</div>
+                                        <div className="d-flex">
+                                            <span className="d-none d-xl-block me-1" >Or call me directly at</span>
+                                            <span>707-344-0886 <span className="mx-2">|</span></span>
+                                            <a  
+                                                href="https://www.instagram.com/cdoez.flickz/" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                            ><Instagram size={'1.5em'} className="contact-media-btn" /></a>
+                                        </div>
                                         <Button type="submit" variant="dark" className="send-btn px-5" ><span className="send-txt">Send</span></Button>
                                     </div>
                                 </form>

@@ -56,6 +56,10 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
+        .contact-media-btn {
+            cursor: pointer;
+        }
     }
 
     .contact-section {
@@ -66,6 +70,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .contact-media-btn {
+            cursor: pointer;
+        }
 
         .contact-img {
             height: 30em;
@@ -97,6 +105,9 @@
     }
 }
 
+a {
+    color: $text-color;
+}
 
 .nav-btn {
     cursor: pointer;
