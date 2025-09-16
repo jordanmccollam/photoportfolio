@@ -46,10 +46,53 @@ const Main = (props) => {
         }
     }
 
+    const scrollToSection = (sectionStr) => {
+        const section = document.getElementById(sectionStr);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <Container className="main" id="main-section" fluid>
             
-            {photos.length > 0 && ( <HorizontalGallery photos={photos} size={8} /> )}
+            {photos.length > 0 && ( 
+                <HorizontalGallery 
+                    photos={photos} 
+                    size={8} 
+                    scrollTo={() => scrollToSection('about-section')} 
+                /> 
+            )}
+
+            <Row className="about-section" id="about-section">
+                <Col lg={5} className="about-img-container">
+                    <img 
+                        src={photos[0]?.url}
+                        alt={"about-img"}
+                        className="about-img"
+                    />
+                </Col>
+                <Col lg={7} >
+                    <Row className="h-100 d-flex justify-content-center align-items-center">
+                        <Col lg={9} >
+                            <h2 className="mb-5">ABOUT</h2>
+
+                            <div className="mb-4">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                            <div className="mb-4">
+                                Please enjoy a photo dump of all my work below. <span className="contact-link" >Contact me</span> directly for inquiries and pricing.
+                            </div>
+                            <div className="tagline mb-5">
+                                Let me help you bring your vision to life.
+                            </div>
+                            <div className="text-center">
+                                <ChevronsDown size={'2em'} className="nav-btn" onClick={() => scrollToSection('main-section')} />
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
 
 
 

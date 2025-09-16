@@ -3,10 +3,57 @@
 
 .main {
     // background-color: lightgray;
-    height: inherit;
+    height: 100vh;
     width: inherit;
     padding: 0;
     margin: 0;
+
+    font-family: $font-secondary;
+
+
+    .about-section {
+        margin-top: $space-02;
+        height: 100vh;
+
+        .about-img {
+            height: 100vh;
+
+            &-container {
+                overflow: hidden;
+            }
+        }
+
+        .about-bio {
+            // border: 1px solid red;
+        }
+
+        .contact-link {
+            color: $ghana-yellow;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.nav-btn {
+    cursor: pointer;
+    transition: $transition;
+
+    &:not(:hover) {
+        animation: none;
+    }
+    &:hover {
+        animation: bob 1.5s ease-in-out infinite;
+    }
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); // adjust bob height here
+    }
 }
 
 

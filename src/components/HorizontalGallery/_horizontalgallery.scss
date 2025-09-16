@@ -17,6 +17,27 @@
     &-loading {
         opacity: 0;
     }
+
+    &-down-arrow {
+        // positioning...
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        // style...
+        color: $text-color-alt;
+        // transform: scaleX(1.45);
+        cursor: pointer;
+        transition: $transition;
+
+        &:not(:hover) {
+            animation: none;
+        }
+        &:hover {
+            animation: centered-bob 1.5s ease-in-out infinite;
+        }
+    }
 }
 
 .horiz-gal-img {
@@ -25,5 +46,15 @@
 
     &:first-child {
         margin-left: $space-02;
+    }
+}
+
+
+@keyframes centered-bob {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 5px)); // adjust bob height here
     }
 }

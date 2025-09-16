@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
 import { Row, Col, Button } from "react-bootstrap";
 
 import './_horizontalgallery.scss';
@@ -72,31 +72,9 @@ const HorizontalGallery = (props) => {
                         onLoad={handleImageLoad}
                     />
                 ))}
-
-
-                {/* <Row className="horiz-gal-row">
-                    <Col xs="auto" className="d-none d-md-block side-image">
-                        <img src={photos[(index - 1 + photos.length) % photos.length]?.url} alt="left" className="horiz-gal-img side left" />
-                    </Col>
-
-
-                    <Col xs="auto">
-                        <img src={photos[index]?.url} alt="center" className="horiz-gal-img center" />
-                    </Col>
-
-
-                    <Col xs="auto" className="d-none d-md-block side-image">
-                        <img src={photos[(index + 1) % photos.length]?.url} alt="right" className="horiz-gal-img side right" />
-                    </Col>
-                </Row>
-
-                <Button variant="light" onClick={prev} className="horiz-gal-arrow left">
-                    <ChevronLeft size={24} />
-                </Button>
-                <Button variant="light" onClick={next} className="horiz-gal-arrow right">
-                    <ChevronRight size={24} />
-                </Button> */}
             </div>
+
+            <ChevronsDown size={'3em'} className="horiz-gal-down-arrow" onClick={props?.scrollTo} />
         </div>
     );
 }
