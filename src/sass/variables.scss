@@ -107,6 +107,10 @@ $grey-00: #EFEFEF;
 $white-00: #ffffff; // plain white
 $white-01: #fbfcf7; // bg of https://www.moriahziman.com/portraits
 
+// Shades of white (usually for testing)
+$black-00: #000000; // plain black
+$black-01: #0f0f0f; // what I was using before I started this test?
+
 /*
  *  BOOTSTRAP OVERRIDES
  */
@@ -171,8 +175,8 @@ $ghana-bg: #0D0D0D; // #1C1C1C <- great ghana bg color || 0D0D0D <- what I was u
 $bg: $white-01; // light
 // $bg: $ghana-bg; // dark
 
-$text-color: #0f0f0f; // dark text for light bg
-$text-color-alt: $white-01; // dark text for light bg
+$text-color: $black-01; // dark text for light bg
+$text-color-alt: $bg; // dark text for light bg
 
 $light: darken($bg, 2%);
 
