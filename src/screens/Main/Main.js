@@ -105,7 +105,7 @@ const Main = (props) => {
                 </Row>
 
                 
-                <Gallery photos={photos} id={"gallery-section"} />
+                <Gallery photos={photos} id={"gallery-section"} size={20} />
 
 
                 <Row className="contact-section" id="contact-section">
