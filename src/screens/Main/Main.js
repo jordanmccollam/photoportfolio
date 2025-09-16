@@ -118,7 +118,7 @@ const Main = (props) => {
                             />
                             <div className="contact-form-container ml-4">
                                 <h2 className="">CONTACT</h2>
-                                <form action="https://formspree.io/f/jordy.mccollam@gmail.com" method="POST" className="contact-form" >
+                                <form action="https://formspree.io/f/myzdaajq" method="POST" className="contact-form" >
                                     <Form.Control placeholder="Email" type="email" name="_replyto" />
                                     <Form.Control className="mt-2" placeholder="Subject" name="subject" />
                                     <Form.Control className="mt-2" as="textarea" rows={5} placeholder="Message" name="message" />
