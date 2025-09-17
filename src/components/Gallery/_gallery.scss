@@ -28,4 +28,20 @@ $gap-mobile: 1px;
         column-gap: $gap-mobile;
         column-count: 3;
     }
+
+
+    &-fullscreen {
+        position: fixed;
+        inset: 0;
+        background-color:rgba(0, 0, 0, .9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+
+        .fullscreen-item {
+            max-height: 100vh;
+            max-width: 100vw;
+        }
+    }
 }
