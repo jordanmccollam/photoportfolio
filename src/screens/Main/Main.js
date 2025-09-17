@@ -10,18 +10,31 @@ import './_main.scss';
 
 const logger = "Screen/Main:: ";
 
-const Main = (props) => {
-    const [photos, setPhotos] = useState([]);
+const Main = () => {
+    const [featuredPhotos, setFeaturedPhotos] = useState([]);
+    const [recentPhotos, setRecentPhotos] = useState([]);
 
     useEffect(() => {
-        fetchPhotos();
+        // TESTING
+        handleDropboxFolders();
     }, [])
 
-    // This pulls the photos from dropbox api
-    const fetchPhotos = async () => {
+    const handleDropboxFolders = async () => {
+        // These are the photos that will go in the horizontal gallery
+        const _featuredPhotos = await fetchPhotos('FEATURED');
+        // console.log(logger + 'Featured Photos: ', _featuredPhotos);
+        setFeaturedPhotos(_featuredPhotos);
+
+        // These are the photos that will go in the gallery / dump / recent work
+        const _recentPhotos = await fetchPhotos('GALLERY');
+        // console.log(logger + 'Recent Photos: ', _recentPhotos);
+        setRecentPhotos(_recentPhotos);
+    }
+
+    const fetchPhotos = async (folder) => {
         const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
         // console.log(logger + "Fetching from: " + API_URL)
-        const res = await fetch(`${API_URL}/api/photos`);
+        const res = await fetch(`${API_URL}/api/photos/${folder}`);
         // console.log(logger + "res: ", res);
 
         if (!res.ok) {
@@ -31,14 +44,7 @@ const Main = (props) => {
         const data = await res.json();
         // console.log(logger + "data: ", data);
         const data_randomized = data.sort(() => Math.random() - 0.5)
-        setPhotos(data_randomized);
-    }
-
-    const scrollToNextSection = (e) => {
-        const section = document.getElementById("gallery-section");
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
+        return data_randomized;
     }
 
     const scrollToSection = (sectionStr) => {
@@ -64,10 +70,10 @@ const Main = (props) => {
             </div>
 
 
-            {photos.length > 0 && ( 
+            {featuredPhotos.length > 0 && ( 
                 <HorizontalGallery 
-                    photos={photos} 
-                    size={8} 
+                    photos={featuredPhotos} 
+                    size={featuredPhotos.length < 8 ? featuredPhotos.length : 8} 
                     scrollTo={() => scrollToSection('about-section')} 
                 /> 
             )}
@@ -77,7 +83,7 @@ const Main = (props) => {
                 <Row className="about-section" id="about-section">
                     <Col md={5} lg={5} className="about-img-container d-none d-md-block">
                         <img 
-                            src={photos[0]?.url}
+                            src={aboutPhoto}
                             alt={"about-img"}
                             className="about-img"
                         />
@@ -109,7 +115,7 @@ const Main = (props) => {
                         <h2 className="my-5">RECENT WORK</h2>
                     </Col>
                 </Row>
-                <Gallery photos={photos} size={20} />
+                <Gallery photos={recentPhotos} size={recentPhotos.length < 20 ? recentPhotos.length : 20} />
 
 
                 <Row className="contact-section" id="contact-section">
