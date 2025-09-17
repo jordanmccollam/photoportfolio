@@ -85,7 +85,7 @@ const Main = () => {
                         <img 
                             src={aboutPhoto}
                             alt={"about-img"}
-                            className="about-img"
+                            className="about-img no-pointer"
                         />
                     </Col>
                     <Col md={7} lg={7} className="px-5 px-lg-2" >
@@ -124,7 +124,7 @@ const Main = () => {
                             <img 
                                 src={contactPhoto}
                                 alt="contact-img"
-                                className="contact-img d-none d-md-block"
+                                className="contact-img d-none d-md-block no-pointer"
                             />
                             <div className="contact-form-container ml-4">
                                 <h2 className="">CONTACT</h2>

@@ -12,6 +12,13 @@
     font-family: $font-secondary;
     // text-transform: uppercase;
 
+    img {
+        cursor: pointer;
+
+        &.no-pointer {
+            cursor: default !important;
+        }
+    }
 
     .top-bar {
         min-height: 50px;
