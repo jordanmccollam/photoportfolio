@@ -104,8 +104,12 @@ const Main = (props) => {
                     </Col>
                 </Row>
 
-                
-                <Gallery photos={photos} id={"gallery-section"} size={20} />
+                <Row id={"gallery-section"} className="text-center">
+                    <Col>
+                        <h2 className="my-5">RECENT WORK</h2>
+                    </Col>
+                </Row>
+                <Gallery photos={photos} size={20} />
 
 
                 <Row className="contact-section" id="contact-section">
