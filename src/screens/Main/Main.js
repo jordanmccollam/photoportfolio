@@ -3,12 +3,14 @@ import { Row, Col, Container, Button, Form, Spinner } from 'react-bootstrap';
 import { Gallery, GhanaBorder, Carousel, HorizontalGallery } from "../../components";
 import { ChevronsDown, ChevronsUp, Instagram } from "lucide-react";
 import logo from "../../assets/logo-banner.png"
-import contactPhoto from "../../assets/test-img.webp"
-import aboutPhoto from "../../assets/test-img.webp"
+import contactPhoto from "../../assets/profile_2.JPEG"
+import aboutPhoto from "../../assets/profile_1.png"
 
 import './_main.scss';
 
 const logger = "Screen/Main:: ";
+
+const carls_bio_text = "Hi, my name is Carl Osifo-Doe. I was born in Ohio in 2005, and my family is from Ghana. Growing up, I was the ‘tech guy’ in the family. At any family gatherings, I was always taking pictures on everyone’s phones. Without this experience right here creating a passion that would shape my future. In 2025, I started pursuing photography seriously, and it’s taken me to places I never imagined. Through this page, my goal is to build a team of photographers across California capturing people chasing dreams, exploring new places, and living life to the fullest."
 
 const Main = () => {
     const [featuredPhotos, setFeaturedPhotos] = useState([]);
@@ -103,13 +105,13 @@ const Main = () => {
                                     <h2 className="mb-5">ABOUT</h2>
 
                                     <div className="mb-4">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        {carls_bio_text}
                                     </div>
                                     <div className="mb-4">
-                                        Please enjoy a photo dump of all my work below. <span className="contact-link" onClick={() => scrollToSection('contact-section')} >Contact me</span> directly for inquiries and pricing.
+                                        Please enjoy more of my recent work below. <span className="contact-link" onClick={() => scrollToSection('contact-section')} >Contact me</span> directly for inquiries and pricing.
                                     </div>
                                     <div className="tagline mb-5">
-                                        Let me help you bring your vision to life.
+                                        Turning moments into timeless visions
                                     </div>
                                     <div className="text-center">
                                         <ChevronsDown size={'2em'} className="nav-btn" onClick={() => scrollToSection('gallery-section')} />
