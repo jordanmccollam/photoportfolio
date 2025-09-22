@@ -9,6 +9,11 @@ $gap-mobile: 1px;
     // padding-right: $gap;
     column-count: 3; /* number of columns */
     column-gap: $gap;
+    transition: $transition;
+
+    &.gallery-loading {
+        opacity: 0;
+    }
 
     .gallery-item {
         width: 100%;

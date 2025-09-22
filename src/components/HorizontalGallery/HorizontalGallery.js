@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Spinner } from "react-bootstrap";
 
 import './_horizontalgallery.scss';
 
@@ -62,6 +62,16 @@ const HorizontalGallery = (props) => {
 
     return (
         <div className="horiz-gal-container">
+            {!loaded && (
+                <Row className="border border-danger h-100">
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <div className="text-center">
+                            <Spinner animation="grow" />
+                            <h5 className="mt-4">STANDBY</h5>
+                        </div>
+                    </Col>
+                </Row>
+            )}
             <div className={`horiz-gal ${loaded ? 'horiz-gal-loaded' : 'horiz-gal-loading'}`} ref={scrollRef}>
 
                 {props?.photos?.slice(0, totalImages).map((photo, index) => (
