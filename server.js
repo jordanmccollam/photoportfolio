@@ -6,8 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Enable CORS for local development
-const cors = require("cors");
-app.use(cors());
+if (process.env.NODE_ENV !== "production") {
+  const cors = require("cors");
+  app.use(cors());
+}
 
 
 // API LAND --------------------------------------

@@ -41,7 +41,7 @@ const Main = () => {
     }
 
     const fetchPhotos = async (folder) => {
-        const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        const API_URL = process.env.REACT_APP_API_URL;
         // console.log(logger + "Fetching from: " + API_URL)
         const res = await fetch(`${API_URL}/api/photos/${folder}`);
         // console.log(logger + "res: ", res);
