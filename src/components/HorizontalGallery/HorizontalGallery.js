@@ -32,8 +32,16 @@ const HorizontalGallery = (props) => {
             const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
             if (isFullyVisible && e.deltaY !== 0) {
-                e.preventDefault(); // prevent vertical scroll
-                el.scrollLeft += e.deltaY; // horizontal scroll
+                e.preventDefault();
+
+                let scrollAmount = e.deltaY;
+
+                // adjust for line-based mouse wheel
+                if (e.deltaMode === 1) { // 1 = lines
+                    scrollAmount *= 20; // tweak multiplier for sensitivity
+                }
+
+                el.scrollLeft += scrollAmount;
             }
         };
 
