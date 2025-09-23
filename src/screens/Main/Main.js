@@ -166,7 +166,7 @@ const Main = () => {
 
                 </div>
             ) : (
-                <Row className="border border-danger h-100">
+                <Row className="h-100">
                     <Col className="d-flex justify-content-center align-items-center">
                         <div className="text-center">
                             <Spinner animation="grow" />
