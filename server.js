@@ -9,9 +9,6 @@ const PORT = process.env.PORT || 8000;
 const cors = require("cors");
 app.use(cors());
 
-// Helper: get Dropbox token from env
-const DROPBOX_TOKEN = process.env.DROPBOX_TOKEN;
-
 
 // API LAND --------------------------------------
 let accessToken = null;
@@ -50,7 +47,7 @@ async function getAccessToken() {
 app.get("/api/photos/:folder", async (req, res) => {
   try {
     const folder = req.params.folder;
-    const path = `/CDOEZFLICKS_API/${folder}`;
+    const _path = `/CDOEZFLICKS_API/${folder}`;
     const testPath = `/CARLSPHOTOSTEST`
     const token = await getAccessToken();
 
@@ -61,7 +58,7 @@ app.get("/api/photos/:folder", async (req, res) => {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ path: path }),
+      body: JSON.stringify({ path: _path }),
     });
 
     const listData = await listRes.json();
@@ -102,7 +99,7 @@ app.get("/api/photos/:folder", async (req, res) => {
 // Serve React build
 app.use(express.static(path.join(__dirname, "build")));
 
-app.get("*", (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
