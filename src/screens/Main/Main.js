@@ -148,7 +148,7 @@ const Main = () => {
                                                 <span className="d-none d-xl-block me-1" >Or call me directly at</span>
                                                 <span>707-344-0886 <span className="mx-2">|</span></span>
                                                 <a  
-                                                    href="https://www.instagram.com/cdoez.flickz/" 
+                                                    href="https://www.instagram.com/cdoez.flicks/" 
                                                     target="_blank" 
                                                     rel="noopener noreferrer"
                                                 ><Instagram size={'1.5em'} className="contact-media-btn" /></a>
