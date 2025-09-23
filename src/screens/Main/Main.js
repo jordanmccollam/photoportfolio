@@ -10,7 +10,7 @@ import './_main.scss';
 
 const logger = "Screen/Main:: ";
 
-const carls_bio_text = "Hi, my name is Carl Osifo-Doe. I was born in Ohio in 2005, and my family is from Ghana. Growing up, I was the ‘tech guy’ in the family. At any family gatherings, I was always taking pictures on everyone’s phones. Without this experience right here creating a passion that would shape my future. In 2025, I started pursuing photography seriously, and it’s taken me to places I never imagined. Through this page, my goal is to build a team of photographers across California capturing people chasing dreams, exploring new places, and living life to the fullest."
+const carls_bio_text = "Hi, my name is Carl Osifo-Doe. I was born in Ohio in 2005, and my family is from Ghana. Growing up, I was the ‘tech guy’ in the family. At any family gatherings, I was always taking pictures on everyone’s phones. Without this experience right here, I wouldn't have created this passion I have now. In 2025, I started pursuing photography seriously, and it’s taken me to places I never imagined. Through this page, my goal is to build a team of photographers across California capturing people chasing dreams, exploring new places, and living life to the fullest."
 
 const Main = () => {
     const [featuredPhotos, setFeaturedPhotos] = useState([]);
