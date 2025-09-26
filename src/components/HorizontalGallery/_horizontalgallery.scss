@@ -89,28 +89,8 @@
 .horiz-gal-logo {
     pointer-events: none;
     opacity: 0;
-    // animation: fadeGrow 2s ease-in-out forwards;
     animation: pulseGrow 2.5s ease-in-out infinite;
 }
-
-// @keyframes fadeGrow {
-//   0% {
-//     opacity: 0;
-//     transform: scale(1);
-//   }
-//   25% {
-//     opacity: 1;
-//     transform: scale(1.02); /* subtle growth */
-//   }
-//   75% {
-//     opacity: 1;
-//     transform: scale(1.04);
-//   }
-//   100% {
-//     opacity: 0;
-//     transform: scale(1.05);
-//   }
-// }
 
 @keyframes pulseGrow {
   0% {
