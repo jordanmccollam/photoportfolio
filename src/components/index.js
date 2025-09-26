@@ -1,11 +1,9 @@
 import Gallery from './Gallery/Gallery';
 import HorizontalGallery from './HorizontalGallery/HorizontalGallery';
-import GhanaBorder from './GhanaBorder/GhanaBorder';
-import Carousel from './Carousel/Carousel';
+import Loading from './Loading/Loading';
 
 export {
     Gallery,
     HorizontalGallery,
-    GhanaBorder,
-    Carousel
+    Loading
 }

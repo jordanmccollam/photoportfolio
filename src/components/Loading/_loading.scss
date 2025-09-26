@@ -1,0 +1,65 @@
+@import "../../sass/variables";
+
+$gap: $space-02;
+$gap-mobile: 1px;
+
+.loading-gallery {
+    column-count: 3; /* number of columns */
+    column-gap: $gap;
+    transition: $transition;
+    
+    // height: 100vh;
+    // border: 2px solid red;
+    // // overflow: scroll;
+
+    .loading-overlay {
+        position: fixed;
+
+        // USE THIS IF YOU WANT IT CENTERED
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: 100vw;
+
+        // USE THIS FOR BOTTOM RIGHT CORNER
+        // right: 1%;
+        // bottom: 1%;
+        // border-radius: $radius;
+        // padding-bottom: .5em;
+        // padding-top: 1em;
+        // padding-right: 3em;
+        // padding-left: 3em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgba(0, 0, 0, .5);
+        // background-color:red;
+        color: $text-color-alt;
+        text-align: center;
+
+    }
+
+    .preloaded-gallery-item {
+        width: 100%;
+        margin-bottom: $gap;
+        display: block;
+        object-fit: cover;
+
+        @media (max-width: $md) {
+            margin-bottom: $gap-mobile;
+            border-radius: 4px;
+        }
+    }
+
+    /* Mobile (less than 576px) */
+    @media (max-width: $md) {
+        column-gap: $gap-mobile;
+        column-count: 3;
+
+        // .loading-overlay {
+        //     width: 98%;
+        // }
+    }
+}

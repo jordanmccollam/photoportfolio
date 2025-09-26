@@ -12,7 +12,8 @@
     height: 100%;
     overflow-x: scroll;
     display: flex;
-    transition: $transition;
+    // transition: $transition;
+    transition: 1s ease-in-out;
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
 
@@ -66,4 +67,62 @@
     50% {
         transform: translate(-50%, calc(-50% - 5px)); // adjust bob height here
     }
+}
+
+
+
+.horiz-gal-logo-container {
+    // border: 2px solid red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 98; // ensure it's above other content
+    transition: 2.5s;
+    pointer-events: none;
+
+    &.fade-out {
+        opacity: 0;
+    }
+}
+
+.horiz-gal-logo {
+    pointer-events: none;
+    opacity: 0;
+    // animation: fadeGrow 2s ease-in-out forwards;
+    animation: pulseGrow 2.5s ease-in-out infinite;
+}
+
+// @keyframes fadeGrow {
+//   0% {
+//     opacity: 0;
+//     transform: scale(1);
+//   }
+//   25% {
+//     opacity: 1;
+//     transform: scale(1.02); /* subtle growth */
+//   }
+//   75% {
+//     opacity: 1;
+//     transform: scale(1.04);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: scale(1.05);
+//   }
+// }
+
+@keyframes pulseGrow {
+  0% {
+    opacity: .6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04); /* very slight grow */
+  }
+  100% {
+    opacity: .6;
+    transform: scale(1);
+  }
 }

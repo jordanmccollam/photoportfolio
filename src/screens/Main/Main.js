@@ -1,12 +1,54 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Container, Button, Form, Spinner } from 'react-bootstrap';
-import { Gallery, GhanaBorder, Carousel, HorizontalGallery } from "../../components";
+import { Gallery, HorizontalGallery, Loading } from "../../components";
 import { ChevronsDown, ChevronsUp, Instagram } from "lucide-react";
 import logo from "../../assets/logo-banner.png"
 import contactPhoto from "../../assets/profile_2.JPEG"
 import aboutPhoto from "../../assets/profile_1.png"
 
 import './_main.scss';
+
+
+// Imported local images
+import image_1 from '../../assets/local_gallery/DSC06509.jpeg';
+import image_2 from '../../assets/local_gallery/DSC06828.jpeg';
+import image_3 from '../../assets/local_gallery/DSC06834.jpeg';
+import image_4 from '../../assets/local_gallery/DSC06865.jpeg';
+import image_5 from '../../assets/local_gallery/DSCN1395.jpg';
+import image_6 from '../../assets/local_gallery/DSCN1441.jpg';
+import image_7 from '../../assets/local_gallery/DSCN1447.jpg';
+import image_8 from '../../assets/local_gallery/DSCN1457.jpg';
+import image_9 from '../../assets/local_gallery/DSCN1500.jpg';
+import image_10 from '../../assets/local_gallery/DSCN2503.jpg';
+import image_11 from '../../assets/local_gallery/DSCN2593.jpg';
+import image_12 from '../../assets/local_gallery/DSCN2638.jpg';
+import image_13 from '../../assets/local_gallery/DSCN2708.jpg';
+import image_14 from '../../assets/local_gallery/DSCN2729.jpg';
+import image_15 from '../../assets/local_gallery/DSCN2730.jpg';
+import image_16 from '../../assets/local_gallery/DSCN1365.JPG';
+import image_17 from '../../assets/local_gallery/DSCN1571.JPG';
+import image_18 from '../../assets/local_gallery/DSCN1790.JPG';
+
+const preloaded_images = [
+    {id: 1, url: image_1, name: "local-1"},
+    {id: 2, url: image_2, name: "local-2"},
+    {id: 3, url: image_3, name: "local-3"},
+    {id: 4, url: image_4, name: "local-4"},
+    {id: 5, url: image_5, name: "local-5"},
+    {id: 6, url: image_6, name: "local-6"},
+    {id: 7, url: image_7, name: "local-7"},
+    {id: 8, url: image_8, name: "local-8"},
+    {id: 9, url: image_9, name: "local-9"},
+    {id: 10, url: image_10, name: "local-10"},
+    {id: 11, url: image_11, name: "local-11"},
+    {id: 12, url: image_12, name: "local-12"},
+    {id: 13, url: image_13, name: "local-13"},
+    {id: 14, url: image_14, name: "local-14"},
+    {id: 15, url: image_15, name: "local-15"},
+    {id: 16, url: image_16, name: "local-16"},
+    {id: 17, url: image_17, name: "local-17"},
+    {id: 18, url: image_18, name: "local-18"}
+]
 
 const logger = "Screen/Main:: ";
 
@@ -77,6 +119,14 @@ const Main = () => {
                     {/* <GhanaBorder full /> */}
                 </Row>
             </div>
+
+            {/* <HorizontalGallery 
+                photos={preloaded_images}
+                size={preloaded_images.length}
+                scrollTo={() => scrollToSection('about-section')}
+            /> */}
+
+            {/* <Loading /> */}
 
 
             {(featuredPhotos.length > 0 && recentPhotos.length > 0) && ( 
@@ -166,14 +216,7 @@ const Main = () => {
 
                 </div>
             ) : (
-                <Row className="h-100">
-                    <Col className="d-flex justify-content-center align-items-center">
-                        <div className="text-center">
-                            <Spinner animation="grow" />
-                            <h5 className="mt-4">LOADING</h5>
-                        </div>
-                    </Col>
-                </Row>
+                <Loading />
             )}
         </Container>
     )

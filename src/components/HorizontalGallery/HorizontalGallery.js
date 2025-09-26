@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
 import { Row, Col, Button, Spinner } from "react-bootstrap";
+import logo from "../../assets/logo-banner.png";
 
 import './_horizontalgallery.scss';
 
@@ -9,13 +10,21 @@ const logger = "Comp/HorizontalGallery:: ";
 
 const HorizontalGallery = (props) => {
     const scrollRef = useRef(null);
-    const [loaded, setLoaded] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [fadeOut, setFadeOut] = useState(false);
     const loadedCount = useRef(0);
     const totalImages = props.size ? props.size : 8; // number of images in gallery. 8 by default.
 
 
   
     useEffect(() => {
+        // First scroll to top of the page on load...
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
+
+        // Then set up horizontal scrolling
         handleHorizontalScrolling();
     }, [])
 
@@ -64,23 +73,21 @@ const HorizontalGallery = (props) => {
     const handleImageLoad = () => {
         loadedCount.current += 1;
         if (loadedCount.current === totalImages) {
-            setLoaded(true); // all images finished loading
+            // TRIGGER LOGO ANIMATION FADE OUT
+            setFadeOut(true);
+            setTimeout(() => setLoading(false), 600); // match fade-out duration
         }
     }
 
     return (
         <div className="horiz-gal-container">
-            {!loaded && (
-                <Row className="h-100">
-                    <Col className="d-flex justify-content-center align-items-center">
-                        <div className="text-center">
-                            <Spinner animation="grow" />
-                            <h5 className="mt-4">STANDBY</h5>
-                        </div>
-                    </Col>
-                </Row>
-            )}
-            <div className={`horiz-gal ${loaded ? 'horiz-gal-loaded' : 'horiz-gal-loading'}`} ref={scrollRef}>
+
+            {/* LOGO FADE IN/OUT */}
+            <div className={`horiz-gal-logo-container ${fadeOut ? 'fade-out' : ''}`} >
+                <img src={logo} alt="logo" className="horiz-gal-logo" />
+            </div>
+
+            <div className={`horiz-gal ${!loading ? 'horiz-gal-loaded' : 'horiz-gal-loading'}`} ref={scrollRef}>
 
                 {props?.photos?.slice(0, totalImages).map((photo, index) => (
                     <img

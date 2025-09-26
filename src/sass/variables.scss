@@ -26,6 +26,14 @@ $tablet-up: "(min-width: #{$tablet})";
 $laptop-up: "(min-width: #{$laptop})";
 $desktop-up: "(min-width: #{$desktop})";
 
+
+/*
+ *  BOOTSTRAP Responsive Breakpoints
+ */
+ $sm: 576px;
+ $md: 767.98px;
+
+
 /*
  *  Font Sizes
  */
@@ -180,7 +188,7 @@ $text-color-alt: $bg; // dark text for light bg
 
 $light: darken($bg, 2%);
 
-$radius: 20px;
+$radius: 10px;
 
 $font-primary: "Alkatra", system-ui;
 $font-secondary: "Moderustic", serif;
